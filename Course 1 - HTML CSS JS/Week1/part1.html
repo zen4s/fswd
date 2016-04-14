@@ -1,20 +1,27 @@
 <!DOCTYPE html>
+<!--Assignment for HTML, CSS & JavaScript Course
+    Week : 01
+    Assignment: Part 01
+    Name : part1.html
+-->
 <html lang="en">
 <head>
   <title>Dating For All</title>
 </head>
 <body>
+<!--Heading of the Page-->
+<h1>Please Enter Your Details For Our Dating Website!</h1>
 <!--Form for the dating website. The form is divided in 4 groups identified by div -->
 <form Action="http://ihome.ust.hk/~rossiter/cgi-bin/show_everything.php" method="post" enctype="multipart/form-data">
   <!--You Face Group of elements-->
   <div>
     <fieldset>
       <legend>Your Face</legend>
-      <label>Your Image:</label>
-      <input id="fileselect" type="file" value="Filename">
+      <label for="photo">Your Image:</label>
+      <input type="file" id="photo" name="photo" required>
       <br>
       <label>Image Preview:</label>
-      <img id="preview" border="0" alt="Your Face" src="" >
+      <img id="preview" border="0" alt="Photo" src="">
     </fieldset>
   </div>
   <!--General Details Group of elements -->
@@ -22,14 +29,16 @@
     <fieldset>
       <legend>Your General Details</legend>
       <label for="name">Name:</label>
-      <input type="text" id="name" name="name">
+      <input type="text" id="name" name="name" placeholder="Your Full Name"required>
       <br>
-      <label for="gender">Gender:</label>
-      <input type="radio" id="gender" name="gender" value="male" checked> Male
-      <input type="radio" id="gender" name="gender" value="female"> Female
+      <label>Gender:</label>
+      <input type="radio" id="male" name="gender" value="male" required>
+      <label for="male">Male</label>
+      <input type="radio" id="female" name="gender" value="female">
+      <label for="female">Female</label>
       <br>
       <label for="age">Age:</label>
-      <input type="number" id="age" name="age" min=1 max=150>
+      <input type="number" id="age" name="age" min=1 max=150 required>
       <br>
       <label for="dob">Date of Birth:</label>
       <input type="date" id="dob" name="dob">
@@ -49,40 +58,43 @@
       <br>
     </fieldset>
   </div>
+  <!--Your Indicator Group of elements -->
   <div>
-    <fieldset>
+  <fieldset>
       <legend>Your Indicators</legend>
       <label for="urheight">Height: Short</label>
-      <input id="urheight" type="range" name="height" min=1 max=10 step=1>
+      <input id="urheight" type="range" name="height" min=1 max=100>
       <label for="urheight">Tall</label>
       <br>
       <label for="ursalary">Salary: Poor</label>
-      <input id="ursalary" type="range" name="salary" min=1 max=10 step=1>
+      <input id="ursalary" type="range" name="salary" min=1 max=100>
       <label for="urheight">Rich</label>
       <br>
     </fieldset>
   </div>
+  <!--Your Contact Group of elements -->
   <div>
     <fieldset>
       <legend>Your Contact Information</legend>
-      <label for="uremail">Email:</label>
-      <input id="uremail" type="email" name="email">
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email">
       <br>
-      <label for="urmobile">Mobile:</label>
-      <input id="urmobile" type="tel" name="name">
+      <label for="mobile">Mobile:</label>
+      <input type="tel" id="mobile" name="name">
       <br>
-      <label for="uraddress">Address:</label>
-      <input id="uraddress" type="text" name="address">
+      <label for="address">Address:</label>
+      <textarea id="address" name="address" rows="4" cols="40" placeholder="Enter Your Mailing Address"></textarea>
       <br>
-      <label for="urcomm">Method of Contact:</label>
-      <input type="radio" id="urcomm" name="comm" value="Email" checked> Email
-      <input type="radio" id="urcomm" name="comm" value="Whatsapp"> Whatsapp
-      <input type="radio" id="urcomm" name="Comm" value="inappchat"> In-App Chat
+      <label for="contact">Method of Contact:</label>
+      <input type="radio" id="contact" name="contact" value="email"> Email
+      <input type="radio" id="contact" name="contact" value="whatsapp"> Whatsapp
+      <input type="radio" id="contact" name="contact" value="inappchat"> In-App Chat
       <br>
     </fieldset>
   </div>
+  <!--Submit Button to submit the form to the server -->
   <div>
-    <input type="submit" id="ursubmit" name="submit">
+    <input type="submit" id="submit" name="submit">
   </div>
 </form>
 </body>
