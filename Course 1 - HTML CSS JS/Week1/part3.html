@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<!--Assignment for HTML, CSS & JavaScript Course
+    Week : 01
+    Assignment: Part 03
+    Name : part3.html
+-->
+<html lang="en">
+<head>
+  <title>Dating For All</title>
+</head>
+<body>
+<!--Heading of the Page-->
+<h1>Please Enter Your Details For Our Dating Website!</h1>
+<!--Form for the dating website. The form is divided in 4 groups identified by div -->
+<form Action="http://ihome.ust.hk/~rossiter/cgi-bin/show_everything.php" method="post" enctype="multipart/form-data">
+  <!--You Face Group of elements-->
+  <div>
+    <fieldset>
+      <legend>Your Face</legend>
+      <label for="photo">Your Image:</label>
+      <input type="file" id="photo" name="photo" required>
+      <br>
+      <label>Image Preview:</label>
+      <img id="preview" border="0" alt="Photo" src="">
+    </fieldset>
+  </div>
+  <!--General Details Group of elements -->
+  <div>
+    <fieldset>
+      <legend>Your General Details</legend>
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" placeholder="Your Full Name"required>
+      <br>
+      <label>Gender:</label>
+      <input type="radio" id="male" name="gender" value="male" required>
+      <label for="male">Male</label>
+      <input type="radio" id="female" name="gender" value="female">
+      <label for="female">Female</label>
+      <br>
+      <label for="age">Age:</label>
+      <input type="number" id="age" name="age" min=1 max=150 required>
+      <br>
+      <label for="dob">Date of Birth:</label>
+      <input type="date" id="dob" name="dob">
+      <br>
+      <label for="color">Favorite Color:</label>
+      <input type="color" id="color" name="color">
+      <br>
+      <label for="country">Which Country:</label>
+      <select id="country" name="country">
+        <option value="00"></option>
+        <option value="01">England</option>
+        <option value="02">India</option>
+        <option value="03">Swedan</option>
+        <option value="04">Switzerland</option>
+        <option value="05">USA</option>
+      </select>
+      <br>
+    </fieldset>
+  </div>
+  <!--Your Indicator Group of elements -->
+  <div>
+  <fieldset>
+      <legend>Your Indicators</legend>
+      <label for="urheight">Height: Short</label>
+      <input id="urheight" type="range" name="height" min=1 max=100>
+      <label for="urheight">Tall</label>
+      <br>
+      <label for="ursalary">Salary: Poor</label>
+      <input id="ursalary" type="range" name="salary" min=1 max=100>
+      <label for="urheight">Rich</label>
+      <br>
+    </fieldset>
+  </div>
+  <!--Your Contact Group of elements -->
+  <div>
+    <fieldset>
+      <legend>Your Contact Information</legend>
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email">
+      <br>
+      <label for="mobile">Mobile:</label>
+      <input type="tel" id="mobile" name="name">
+      <br>
+      <label for="address">Address:</label>
+      <textarea id="address" name="address" rows="4" cols="40" placeholder="Enter Your Mailing Address"></textarea>
+      <br>
+      <label for="contact">Method of Contact:</label>
+      <input type="radio" id="contact" name="contact" value="email"> Email
+      <input type="radio" id="contact" name="contact" value="whatsapp"> Whatsapp
+      <input type="radio" id="contact" name="contact" value="inappchat"> In-App Chat
+      <br>
+    </fieldset>
+  </div>
+  <!--Submit Button to submit the form to the server -->
+  <div>
+    <input type="submit" id="submit" name="submit">
+  </div>
+</form>
+</body>
+</html>
