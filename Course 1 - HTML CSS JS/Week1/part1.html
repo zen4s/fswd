@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Dating For All</title>
+</head>
+<body>
+<!--Form for the dating website. The form is divided in 4 groups identified by div -->
+<form Action="http://ihome.ust.hk/~rossiter/cgi-bin/show_everything.php" method="post" enctype="multipart/form-data">
+  <!--You Face Group of elements-->
+  <div>
+    <fieldset>
+      <legend>Your Face</legend>
+      <label>Your Image:</label>
+      <input id="fileselect" type="file" value="Filename">
+      <br>
+      <label>Image Preview:</label>
+      <img id="preview" border="0" alt="Your Face" src="" >
+    </fieldset>
+  </div>
+  <!--General Details Group of elements -->
+  <div>
+    <fieldset>
+      <legend>Your General Details</legend>
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name">
+      <br>
+      <label for="gender">Gender:</label>
+      <input type="radio" id="gender" name="gender" value="male" checked> Male
+      <input type="radio" id="gender" name="gender" value="female"> Female
+      <br>
+      <label for="age">Age:</label>
+      <input type="number" id="age" name="age" min=1 max=150>
+      <br>
+      <label for="dob">Date of Birth:</label>
+      <input type="date" id="dob" name="dob">
+      <br>
+      <label for="color">Favorite Color:</label>
+      <input type="color" id="color" name="color">
+      <br>
+      <label for="country">Which Country:</label>
+      <select id="country" name="country">
+        <option value="00"></option>
+        <option value="01">England</option>
+        <option value="02">India</option>
+        <option value="03">Swedan</option>
+        <option value="04">Switzerland</option>
+        <option value="05">USA</option>
+      </select>
+      <br>
+    </fieldset>
+  </div>
+  <div>
+    <fieldset>
+      <legend>Your Indicators</legend>
+      <label for="urheight">Height: Short</label>
+      <input id="urheight" type="range" name="height" min=1 max=10 step=1>
+      <label for="urheight">Tall</label>
+      <br>
+      <label for="ursalary">Salary: Poor</label>
+      <input id="ursalary" type="range" name="salary" min=1 max=10 step=1>
+      <label for="urheight">Rich</label>
+      <br>
+    </fieldset>
+  </div>
+  <div>
+    <fieldset>
+      <legend>Your Contact Information</legend>
+      <label for="uremail">Email:</label>
+      <input id="uremail" type="email" name="email">
+      <br>
+      <label for="urmobile">Mobile:</label>
+      <input id="urmobile" type="tel" name="name">
+      <br>
+      <label for="uraddress">Address:</label>
+      <input id="uraddress" type="text" name="address">
+      <br>
+      <label for="urcomm">Method of Contact:</label>
+      <input type="radio" id="urcomm" name="comm" value="Email" checked> Email
+      <input type="radio" id="urcomm" name="comm" value="Whatsapp"> Whatsapp
+      <input type="radio" id="urcomm" name="Comm" value="inappchat"> In-App Chat
+      <br>
+    </fieldset>
+  </div>
+  <div>
+    <input type="submit" id="ursubmit" name="submit">
+  </div>
+</form>
+</body>
+</html>
