@@ -7,12 +7,63 @@
 <html lang="en">
 <head>
   <title>Dating For All</title>
+  <script src="https://www.cse.ust.hk/~rossiter/dating_web_site.js"></script>
+  <style>
+     fieldset {
+       background:lightyellow;
+       border: 10px solid yellow;
+       margin-bottom: 10px;
+       width: 720px;
+     }
+     fieldset label {
+       width: 180px;
+       display: inline-block;
+       text-align: right;
+       vertical-align: top;
+     }
+     .select_label{
+       width:auto;
+     }
+     fieldset label:hover {
+       font-size: 25px;
+     }
+     fieldset input:hover {
+       font-size: 25px;
+     }
+     fieldset textarea {
+       width: 360px;
+       height: 50px;
+     }
+     .pre_range{
+       min-width: 40px;
+       width: auto;
+       text-align: center;
+       background: #A72A25;
+       color: white;
+       margin-left: 3px;
+       height:auto;
+     }
+     .post_range{
+       min-width: 40px;
+       width: auto;
+       text-align: center;
+       background: #822F82;
+       color: white;
+     }
+     img {
+    margin-top: 5px;
+    max-width: 200px;
+    max-height: 200px;
+    width: auto;
+    height: auto;
+}
+  </style>
 </head>
 <body>
 <!--Heading of the Page-->
 <h1>Please Enter Your Details For Our Dating Website!</h1>
 <!--Form for the dating website. The form is divided in 4 groups identified by div -->
-<form Action="http://ihome.ust.hk/~rossiter/cgi-bin/show_everything.php" method="post" enctype="multipart/form-data">
+<form Action="http://ihome.ust.hk/~rossiter/cgi-bin/show_everything.php" method="get" enctype="multipart/form-data">
   <!--You Face Group of elements-->
   <div>
     <fieldset>
@@ -33,9 +84,9 @@
       <br>
       <label>Gender:</label>
       <input type="radio" id="male" name="gender" value="male" required>
-      <label for="male">Male</label>
+      <label for="male" class="select_label">Male</label>
       <input type="radio" id="female" name="gender" value="female">
-      <label for="female">Female</label>
+      <label for="female" class="select_label">Female</label>
       <br>
       <label for="age">Age:</label>
       <input type="number" id="age" name="age" min=1 max=150 required>
@@ -62,13 +113,13 @@
   <div>
   <fieldset>
       <legend>Your Indicators</legend>
-      <label for="urheight">Height: Short</label>
-      <input id="urheight" type="range" name="height" min=1 max=100>
-      <label for="urheight">Tall</label>
+      <label>Height: </label><label for="height" class="pre_range">Short</label>
+      <input type="range" id="height" name="height" min=1 max=100>
+      <label for="height" class="post_range">Tall</label>
       <br>
-      <label for="ursalary">Salary: Poor</label>
-      <input id="ursalary" type="range" name="salary" min=1 max=100>
-      <label for="urheight">Rich</label>
+      <label>Salary: </label><label for="salary" class="pre_range">Poor</label>
+      <input type="range" id="salary" name="salary" min=1 max=100>
+      <label for="salary" class="post_range">Rich</label>
       <br>
     </fieldset>
   </div>
@@ -86,9 +137,12 @@
       <textarea id="address" name="address" rows="4" cols="40" placeholder="Enter Your Mailing Address"></textarea>
       <br>
       <label for="contact">Method of Contact:</label>
-      <input type="radio" id="contact" name="contact" value="email"> Email
-      <input type="radio" id="contact" name="contact" value="whatsapp"> Whatsapp
-      <input type="radio" id="contact" name="contact" value="inappchat"> In-App Chat
+      <input type="checkbox" id="emailcontact" name="contact" value="email">
+      <label for="emailcontact" class="select_label">Email</label>
+      <input type="checkbox" id="whatsapp" name="contact" value="whatsapp">
+      <label for="whatsapp" class="select_label">Whatsapp</label>
+      <input type="checkbox" id="inappchat" name="contact" value="inappchat">
+      <label for="inappchat" class="select_label">In-App Chat</label>
       <br>
     </fieldset>
   </div>
